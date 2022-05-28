@@ -15,5 +15,7 @@ public class DrawingApp {
         Triangle triangle = (Triangle) context.getBean("triangle");
         System.out.println(triangle.toString());
 
+        System.out.println("update");
+
     }
 }
