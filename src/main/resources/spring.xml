@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <bean id="triangle" class="org.spring.Triangle">
+<!--        <property name="type" value="Equilateral Triangle"/>-->
+<!--        <constructor-arg value="Equilateral Triangle" index="0"/>-->
+<!--        <constructor-arg value="20" index="1"/>-->
+
+<!--        Object injection-->
+<!--        <property name="pointA" ref="point1"/>-->
+<!--        <property name="pointB" ref="point2"/>-->
+<!--        <property name="pointC" ref="point3"/>-->
+
+        <property name="points">
+            <list>
+                <ref bean="point1"/>
+                <ref bean="point2"/>
+<!--                inner bean-->
+                <bean class="org.spring.Point">
+                    <property name="x" value="20"/>
+                    <property name="y" value="0"/>
+                </bean>
+
+            </list>
+        </property>
+
+    </bean>
+
+
+    <bean id="point1" class="org.spring.Point">
+        <property name="x" value="0"/>
+        <property name="y" value="0"/>
+    </bean>
+
+    <bean id="point2" class="org.spring.Point">
+        <property name="x" value="-20"/>
+        <property name="y" value="0"/>
+    </bean>
+
+    <bean id="point3" class="org.spring.Point">
+        <property name="x" value="20"/>
+        <property name="y" value="0"/>
+    </bean>
+
+
+
+</beans>
