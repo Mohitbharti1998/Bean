@@ -38,7 +38,7 @@
 
     <bean id="point2" class="org.spring.Point">
         <property name="x" value="-20"/>
-        <property name="y" value="0"/>
+        <property name="y" value="20"/>
     </bean>
 
     <bean id="point3" class="org.spring.Point">
