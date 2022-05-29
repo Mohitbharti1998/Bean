@@ -11,24 +11,30 @@
 <!--        <constructor-arg value="20" index="1"/>-->
 
 <!--        Object injection-->
-<!--        <property name="pointA" ref="point1"/>-->
-<!--        <property name="pointB" ref="point2"/>-->
-<!--        <property name="pointC" ref="point3"/>-->
+        <property name="pointA" ref="point1"/>
+        <property name="pointB" ref="point2"/>
+        <property name="pointC" ref="point3"/>
 
-        <property name="points">
-            <list>
-                <ref bean="point1"/>
-                <ref bean="point2"/>
+<!--        <property name="points">-->
+<!--            <list>-->
+<!--                <ref bean="point1"/>-->
+<!--                <ref bean="point2"/>-->
 <!--                inner bean-->
-                <bean class="org.spring.Point">
-                    <property name="x" value="20"/>
-                    <property name="y" value="0"/>
-                </bean>
+<!--                <bean class="org.spring.Point">-->
+<!--                    <property name="x" value="20"/>-->
+<!--                    <property name="y" value="0"/>-->
+<!--                </bean>-->
 
-            </list>
-        </property>
+<!--            </list>-->
+<!--        </property>-->
 
     </bean>
+
+    <bean id="circle" class="org.spring.Circle">
+        <property name="center" ref="point1"/>
+
+    </bean>
+
 
 
     <bean id="point1" class="org.spring.Point">
