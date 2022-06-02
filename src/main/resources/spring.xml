@@ -39,6 +39,7 @@
     </bean>
 
     <context:annotation-config/>
+    <context:component-scan base-package="org.spring"/>
 
 
     <bean id="point1" class="org.spring.Point">
